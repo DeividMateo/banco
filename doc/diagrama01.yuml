@@ -1,0 +1,10 @@
+// {type:class}
+// {direccion:leftToRight}
+// {generar:true}
+
+
+[Banco]
+[<<abstrac>>;CuentaBancaria|-numeroCuenta:Texto;-saldo:Real;]  
+[<<record>>;Titular|-nombre:Texto;-apellido:Texto;]
+[CuentaAhorro|-interes:Real;]
+[CuentaCorriente|-sobregiro:Real;]

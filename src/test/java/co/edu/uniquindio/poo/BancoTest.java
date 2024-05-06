@@ -44,14 +44,11 @@ public class BancoTest {
         banco.addCuenta(cuentaCorriente); 
         banco.addCuenta(cuentaCorriente2);  
 
-        banco.retirar("123", 1000.0);
-        banco.depositar("123", "124", 500.0);
-
-        assertTrue(cuentaAhorros.getSaldo() == 500.0);
-        assertTrue(cuentaAhorros2.getSaldo() == 2500.0);
-        
+        banco.transferirSaldoEntreCuentas("123","124", 1000);
 
 
+        assertTrue(cuentaAhorros.getSaldo() == 0);
+        assertTrue(cuentaAhorros2.getSaldo() == 3000);
     }
 
 

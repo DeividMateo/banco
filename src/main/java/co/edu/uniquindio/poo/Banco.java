@@ -40,7 +40,7 @@ public class Banco {
         return cuentaBancaria.getSaldo() > 0;
     }
 
-    public boolean transferirSaldoEntreCuentas(String numeroCuentaOrigen, String numeroCuentaDestino, int saldo) {
+    public void transferirSaldoEntreCuentas(String numeroCuentaOrigen, String numeroCuentaDestino, int saldo) {
         CuentaBancaria CuentaBancariaOrigen = null;
         CuentaBancaria CuentaBancariaDestino = null;
 
@@ -56,7 +56,6 @@ public class Banco {
 
         CuentaBancariaOrigen.retirar(saldo);
         CuentaBancariaDestino.depositar(saldo);
-        return true;
 
     }
 
